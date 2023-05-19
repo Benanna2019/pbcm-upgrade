@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
-import CovidResponse from '../../_components/CovidResponse'
+import CovidResponse from '../../_components/PageContent/CovidResponse'
 import Footer from '../../_components/Layouts/Footer'
-import Header from '../../_components/Header'
+import Header from '../../_components/Layouts/Header'
 
 const Covid: NextPage = () => {
   return (
