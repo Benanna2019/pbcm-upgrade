@@ -12,12 +12,8 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 // @ts-ignore
 import { Navigation } from '../Navigation'
 import { Separator } from '@/shadui/separator'
-import { useViewport } from '@/src/utils/use-viewport'
 
 export default function Header() {
-  const { width } = useViewport()
-  const short_width = width <= 620
-
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -67,21 +63,14 @@ export default function Header() {
                 </div>
               </div>
               <div className="mt-6">
-                <nav
-                  className={`flex h-96 justify-start ${
-                    !short_width && 'space-x-12'
-                  }`}
-                >
-                  <div
-                    className={`flex flex-col justify-around space-y-8 ${
-                      short_width ? 'w-11/12' : ''
-                    }`}
-                  >
+                <nav className="flex h-96 items-start justify-center  md:justify-start md:space-x-12">
+                  <div className="flex w-11/12 flex-col justify-around space-y-8 md:w-auto">
                     <Navigation />
                   </div>
-                  {width > 620 && (
-                    <Separator orientation="vertical" className="h-auto " />
-                  )}
+                  <Separator
+                    orientation="vertical"
+                    className="invisible h-80 self-center md:visible"
+                  />
                 </nav>
               </div>
             </div>

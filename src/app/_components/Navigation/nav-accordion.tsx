@@ -9,7 +9,7 @@ import { routes } from '@/src/utils/constants'
 
 export function NavAccordion() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full md:hidden">
       <AccordionItem value="item-1">
         <AccordionTrigger>
           <Link href="/biblical-counseling">Counseling</Link>
