@@ -66,11 +66,12 @@ export default function FounderContent() {
             </div>
             <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
               <p className="mt-5 text-xl">
-                Dr. Wilson’s educational pursuits from 2002 - 2015 are
+                Dr. Wilson&apos;s educational pursuits from 2002 - 2015 are
                 encompassed in her obtaining a BA and MABC (Masters in Biblical
-                Counseling), MAPM (Master’s in Pastoral Ministries and a Ph.D.
-                (Doctorate in Philosophy) in Biblical Counseling. She taught
-                Biblical counseling at Cummins Memorial Theological Seminary.
+                Counseling), MAPM (Master&apos;s in Pastoral Ministries) and a
+                Ph.D. (Doctorate in Philosophy) in Biblical Counseling. She
+                taught Biblical counseling at Cummins Memorial Theological
+                Seminary.
               </p>
               <p className="mt-5 text-xl">
                 Dr. Janie Dingle Wilson considers her greatest ministry is to

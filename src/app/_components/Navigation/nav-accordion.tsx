@@ -119,7 +119,7 @@ export function NavAccordion() {
             doantion
           </Link>{' '}
           to support the ongoing work of PBCM and lives changed by the Gospel
-          and God's word through biblical counseling
+          and God&apos;s word through biblical counseling
         </AccordionContent>
       </AccordionItem>
     </Accordion>

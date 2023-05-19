@@ -70,7 +70,9 @@ const Equipping: NextPage = () => {
               Square Baptist Church for the following:
             </p>
             <ul className="mx-auto mt-5 max-w-2xl list-disc text-left text-xl text-gray-500">
-              <li>Titus 2 Women's Ministries/Training for Leaders Wives</li>
+              <li>
+                Titus 2 Women&apos;s Ministries/Training for Leaders Wives
+              </li>
               <li>Journey of Hope...Cancer Care Ministry</li>
               <li>Pastoral Counseling</li>
             </ul>

@@ -56,11 +56,11 @@ const About: NextPage = () => {
               </p>
               <p className="mb-4">
                 The main objective in the ministry of Biblical counseling is
-                culminated in, &quot;change of the heart&quot;. God's word (Holy
-                Scripture) contains all we need for life and godliness (2 Peter
-                1:3-4). The word of God must be applied to the heart of man,
-                resulting in being transformed that happens by the renewing of
-                our minds and these internal changes result in life changes!
+                culminated in, &quot;change of the heart&quot;. God&apos;s word
+                (Holy Scripture) contains all we need for life and godliness (2
+                Peter 1:3-4). The word of God must be applied to the heart of
+                man, resulting in being transformed that happens by the renewing
+                of our minds and these internal changes result in life changes!
                 This is not behavior modification. It is a complete
                 transformation that brings glory to God by the power of the Holy
                 Spirit.
@@ -68,12 +68,13 @@ const About: NextPage = () => {
               <p className="mb-4">
                 The PBCM is committed to assisting local churches by providing
                 sound, biblical, Christ-centered discipleship counseling
-                ministering God's complete truth as found in the Scriptures.
-                Through the guidance of the Holy Spirit, we seek to bring the
-                love, healing, and wholeness of Jesus Christ to those suffering
-                emotional, mental, and spiritual pain. We also provide resources
-                and ongoing support services such as discipleship, mentoring,
-                spiritual life coaching, training, seminars and workshops.
+                ministering God&apos;s complete truth as found in the
+                Scriptures. Through the guidance of the Holy Spirit, we seek to
+                bring the love, healing, and wholeness of Jesus Christ to those
+                suffering emotional, mental, and spiritual pain. We also provide
+                resources and ongoing support services such as discipleship,
+                mentoring, spiritual life coaching, training, seminars and
+                workshops.
               </p>
               <p className="mb-4">
                 This is why PBCM not only offers ministry training and seminars
