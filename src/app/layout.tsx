@@ -6,12 +6,6 @@ import Footer from '@/src/app/_components/Layouts/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Peninsula BCM',
-  description:
-    'Biblical Counseling to Reach Charleston, SC East Side, Peninsula, and beyond.',
-}
-
 export default function RootLayout({
   children,
 }: {

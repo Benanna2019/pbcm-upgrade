@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import LandingPage from './_components/Layouts/LandingPage'
-import Header from './_components/Layouts/Header'
-import Footer from './_components/Layouts/Footer'
+
+export const metadata = {
+  title: 'Peninsula BCM',
+  description:
+    'Biblical Counseling to Reach Charleston, SC East Side, Peninsula, and beyond.',
+}
 
 const Home: NextPage = () => {
   return (
