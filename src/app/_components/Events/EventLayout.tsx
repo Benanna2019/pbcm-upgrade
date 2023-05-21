@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'next/link'
-import { LoadingSpinner } from '../LoadingSpinner'
 import { NoDataLayout } from '../Layouts/NoDataLayout'
 import { Compass } from 'react-feather'
 import { GhostButton } from '../Button'
@@ -9,30 +8,7 @@ import { format, parseJSON } from 'date-fns'
 import { isEqual } from 'lodash/fp'
 
 export function EventLayout({ events, featuredEvent }: any) {
-  const {
-    data: allEventsData,
-    isLoading: loadingAllEvents,
-    isError: eventError,
-  } = events
-  const {
-    data: featuredEventData,
-    isLoading: loadingFeaturedEvent,
-    isError: featureEventError,
-  } = featuredEvent
-
-  if (loadingAllEvents) {
-    return (
-      <div className="flex h-96 flex-1 items-center justify-center">
-        <LoadingSpinner />
-      </div>
-    )
-  }
-
-  if (
-    !allEventsData?.allEvents ||
-    allEventsData?.allEvents?.length === 0 ||
-    eventError
-  ) {
+  if (!events || events?.length === 0) {
     return (
       <NoDataLayout
         no_data_heading={'Events Coming Soon'}
@@ -48,10 +24,7 @@ export function EventLayout({ events, featuredEvent }: any) {
     )
   }
 
-  const { allEvents } = allEventsData
-  const mainEvent = featuredEventData?.featuredEvent[0]
-    ? featuredEventData?.featuredEvent[0]
-    : null
+  const mainEvent = featuredEvent[0] ? featuredEvent[0] : null
   return (
     <div className="bg-white">
       <main>
@@ -77,7 +50,7 @@ export function EventLayout({ events, featuredEvent }: any) {
                 </h1>
               </div>
             </div>
-            {allEvents?.map((event: EventType) => (
+            {events?.map((event: EventType) => (
               <Event
                 key={event._id}
                 event={event}
