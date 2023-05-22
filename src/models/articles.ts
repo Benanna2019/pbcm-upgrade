@@ -1,5 +1,6 @@
 import type { Post } from '../clients/parsers/post'
 import Sanity from '../clients/sanity'
+import 'server-only'
 
 const sanity = Sanity()
 

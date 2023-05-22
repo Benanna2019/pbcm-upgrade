@@ -1,5 +1,6 @@
 import type { Event } from '../clients/parsers/event'
 import Sanity from '../clients/sanity'
+import 'server-only'
 
 const sanity = Sanity()
 

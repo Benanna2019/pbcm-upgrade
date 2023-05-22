@@ -4,6 +4,7 @@ import PicoSanity from 'picosanity'
 import { z } from 'zod'
 import { PostSchema, PostType, Post } from './parsers/post'
 import { EventSchema, EventType } from './parsers/event'
+import 'server-only'
 
 export type SanityClient = typeof clientToUse
 
@@ -21,7 +22,7 @@ const config = ConfigSchema.parse({
   apiVersion: '2021-10-21', // use current UTC date - see "specifying API version"!
 })
 
-export const previewClient = PicoSanity({ ...config, useCdn: false })
+export const previewClient = PicoSanity({ ...config, useCdn: true })
 
 export const sanityClient = new PicoSanity(config)
 
@@ -110,7 +111,7 @@ export const getFeaturedEvent = (client: SanityClient) => async () => {
   const featuredEventSlugQuery = `*[_type == "featuredEvent" && ${removeDrafts}]{featuredEvent[]->{"slug": slug.current}}`
   const data = await fetchRecords(client, featuredEventSlugQuery)
   const featuredEvent = await getEventBySlug(client)(
-    data[0].featuredEvent[0].slug
+    data[0]?.featuredEvent[0]?.slug
   )
   // write out Schema to parse the featured event
   return featuredEvent

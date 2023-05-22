@@ -9,9 +9,7 @@ const IndividualEventPage = async ({ params }: any) => {
 
   return (
     <>
-      <Header />
       <EventDetail eventInfo={eventInfo} />
-      <Footer />
     </>
   )
 }
