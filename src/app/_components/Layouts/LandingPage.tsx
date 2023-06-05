@@ -164,10 +164,10 @@ export default async function LandingPage() {
           </div>
 
           {/* Featured Blog Article Section */}
-          <FeaturedArticle featuredPost={featuredPost} />
+          {featuredPost && <FeaturedArticle featuredPost={featuredPost} />}
 
           {/* Event Section */}
-          <FeaturedEvent featuredEvent={featuredEvent} />
+          {featuredEvent && <FeaturedEvent featuredEvent={featuredEvent} />}
 
           {/* <div
             id="celebration-event"

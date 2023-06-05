@@ -3,17 +3,13 @@
 
 import type { NextPage } from 'next'
 import DonatePage from '../../_components/PageContent/DonatePage'
-import Footer from '../../_components/Layouts/Footer'
-import Header from '../../_components/Layouts/Header'
 
 /* This example requires Tailwind CSS v2.0+ */
 
 const Donate: NextPage = () => {
   return (
     <>
-      <Header />
       <DonatePage />
-      <Footer />
     </>
   )
 }
