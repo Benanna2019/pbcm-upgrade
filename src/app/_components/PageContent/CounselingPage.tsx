@@ -57,7 +57,10 @@ function Forms() {
   return (
     <div className="mt-10">
       {forms.map(({ name, href, description }) => (
-        <p className="text-l mt-4 font-semibold leading-8 text-blue-400">
+        <p
+          key={name}
+          className="text-l mt-4 font-semibold leading-8 text-blue-400"
+        >
           <a
             href={href}
             target="_blank"
