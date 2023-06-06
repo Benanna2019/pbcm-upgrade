@@ -27,6 +27,7 @@ export default async function LandingPage() {
                 <Image
                   className="h-full w-full object-cover"
                   src={chsfountain}
+                  priority={true}
                   alt="Pineapple Fountain in Downtown Charleston South Carolina"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-indigo-400 mix-blend-multiply" />
@@ -111,6 +112,7 @@ export default async function LandingPage() {
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                     src={BibleStudy}
                     alt="Bible Study"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -124,6 +126,7 @@ export default async function LandingPage() {
                 className="h-full w-full object-cover"
                 src={Award}
                 alt="ACBC Award"
+                loading="lazy"
               />
               <div
                 aria-hidden="true"
@@ -145,81 +148,15 @@ export default async function LandingPage() {
                   families in their specific situations to know Christ better
                   and handle life in God-pleasing ways.
                 </p>
-                {/* <div className="mt-8">
-                  <div className="inline-flex rounded-md shadow">
-                    <Link
-                      to="/acbc-certified"
-                      className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
-                    >
-                      Read More
-                      <ExternalLinkIcon
-                        className="-mr-1 ml-3 h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </Link>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
 
           {/* Featured Blog Article Section */}
-          {featuredPost && <FeaturedArticle featuredPost={featuredPost} />}
+          {featuredPost[0] && <FeaturedArticle featuredPost={featuredPost} />}
 
           {/* Event Section */}
-          {featuredEvent && <FeaturedEvent featuredEvent={featuredEvent} />}
-
-          {/* <div
-            id="celebration-event"
-            className="relative bg-gray-800 py-32 px-6 sm:py-40 sm:px-12 lg:px-16 mt-24"
-          >
-            <div className="absolute inset-0 overflow-hidden">
-              <img
-                src={Anchor}
-                alt="Hope Anchors the Soul"
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gray-900 bg-opacity-80"
-            />
-            <div className="relative max-w-3xl mx-auto flex flex-col items-center text-center">
-              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                Your Invited
-              </h2>
-              <p className="mt-3 text-xl text-white">
-                The Peninsula Biblical Counseling Ministries (PBCM) has received
-                it's Association of Certified Biblical Counseling (ACBC)
-                Training Center Certification!{" "}
-              </p>
-              <p className="mt-3 text-xl text-white">
-                <em>
-                  Dinner will be served and Covid Protocols will be followed
-                </em>
-              </p>
-              <div className="relative px-4 py-8 sm:px-6 sm:py-8 lg:py-12 lg:px-8">
-                <div className="mt-4 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                  <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <Link
-                      to="acbc-celebration"
-                      className="flex items-center justify-center w-full bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:px-8"
-                    >
-                      Event Info
-                    </Link>
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSeJzdZ2Gj75B_TLk7vOweujaCO4IzeBL9Gfu9zRVQYxmJEWIQ/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-full bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:px-8"
-                    >
-                      RSVP
-                    </a> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+          {featuredEvent[0] && <FeaturedEvent featuredEvent={featuredEvent} />}
 
           {/* Covid Response */}
           <div className="mt-24">
@@ -255,6 +192,7 @@ export default async function LandingPage() {
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                     src={CovidPic}
                     alt="Customer profile user interface"
+                    loading="lazy"
                   />
                 </div>
               </div>

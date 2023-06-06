@@ -15,6 +15,7 @@ export default function CancerCareContent() {
                 <Image
                   className="h-full w-full object-cover "
                   src={Ocean}
+                  priority={true}
                   alt="Journey of Hope"
                 />
               </div>

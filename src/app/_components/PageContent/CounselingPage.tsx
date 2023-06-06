@@ -1,3 +1,5 @@
+import { routes } from '@/src/utils/constants'
+
 export default function CounselingPage() {
   return (
     <div>
@@ -35,68 +37,38 @@ export default function CounselingPage() {
                   Are You Seeking Counseling
                 </span>
               </h1>
-              <p className="mt-12 text-center text-xl font-semibold leading-8 text-gray-700">
+              <p className="mt-12 text-left text-xl font-semibold leading-8 text-gray-700">
                 The PBCM provides faith-based Biblical Counseling to those
                 seeking God&apos;s answers to the questions and problems in
                 their lives. If you are ready to receive Biblical Counseling,
                 click below to schedule your session.
               </p>
-              <p className="text-l mt-6 font-semibold leading-8 text-blue-400">
-                <a
-                  href="https://docs.google.com/document/d/1aOPnNMW2vCjUGkri6kFPYXtkZCgQ-yq8-M5O0qAArXw/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  PBCM Frequently Asked Questions
-                </a>
-              </p>
-              <p className="text-l mt-4 font-semibold leading-8 text-blue-400">
-                <a
-                  href="https://forms.gle/5nteDdxbonAxwvjU6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  Consent To Counseling
-                </a>{' '}
-                -{' '}
-                <em className="text-gray-700">
-                  to be completed prior to first counseling session
-                </em>
-              </p>
-              <p className="text-l mt-4 font-semibold leading-8 text-blue-400">
-                <a
-                  href="https://forms.gle/2AaRLZfPx7zZZ39y5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  Personal Data Inventory Form
-                </a>{' '}
-                -{' '}
-                <em className="text-gray-700">
-                  to be completed prior to first counseling session
-                </em>
-              </p>
-              <p className="text-l mt-4 font-semibold leading-8 text-blue-400">
-                <a
-                  href="https://pbcm.wufoo.com/forms/z1pkqkei18jvjt8/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  Schedule a Counseling Session
-                </a>{' '}
-                -{' '}
-                <em className="text-gray-700">
-                  In person and virtual sessions are available
-                </em>
-              </p>
+              <Forms />
             </div>
           </div>
         </div>
       </main>
+    </div>
+  )
+}
+
+function Forms() {
+  const forms = routes.forms
+  return (
+    <div className="mt-10">
+      {forms.map(({ name, href, description }) => (
+        <p className="text-l mt-4 font-semibold leading-8 text-blue-400">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {name}
+          </a>{' '}
+          - <em className="font-medium text-gray-700">{description}</em>
+        </p>
+      ))}
     </div>
   )
 }

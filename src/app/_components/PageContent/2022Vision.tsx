@@ -14,6 +14,7 @@ export default function Vision() {
                 <Image
                   className="h-full w-full object-cover"
                   src={visionImage}
+                  priority={true}
                   alt="Lens Focusing Mountains"
                 />
                 <div>

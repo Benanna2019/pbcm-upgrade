@@ -21,11 +21,9 @@ import JacintaBryant from '/public/BoardMemberPhotos/jacinta-bryant.jpg'
 import JanieWilson from '/public/BoardMemberPhotos/jdwilson21.jpg'
 import JeanHamilton from '/public/BoardMemberPhotos/jean-hamilton.jpg'
 import JohnFlaugher from '/public/BoardMemberPhotos/john-flaugher.jpg'
-// import KevinGadsden from "/public/BoardMemberPhotos/kevin-gadsden.jpg";
+import HesterGadsden from '/public/BoardMemberPhotos/Hester-Gadsden.jpeg'
 import MatthewWJeffcoat from '/public/BoardMemberPhotos/matthew-w-jeffcoa.jpg'
 import DorianNixon from '/public/BoardMemberPhotos/sam.jpg'
-// import SharonGoss from "/public/BoardMemberPhotos/sharon-goss.jpg";
-import SherlineLawson from '/public/BoardMemberPhotos/sherline-lawson.jpg'
 import BenPatton from '/public/BoardMemberPhotos/ben_patton.jpeg'
 import type { BoardMemberInterface } from '../types'
 
@@ -96,16 +94,17 @@ export const board_info: BoardMemberInterface = {
       category: 'board_member',
     },
     {
+      name: 'Mrs. Hester Gadsden',
+      role: 'Coorporate Secretary',
+      category: 'board_member',
+    },
+    {
       name: 'Rev. George McCray',
       role: 'Board Member',
     },
     {
       name: 'Mrs. Holly Watts',
       role: 'Board Member',
-    },
-    {
-      name: 'Mrs. Hester Gadsden',
-      role: 'Coorporate Secretary',
     },
   ],
   coordinators: [
@@ -133,7 +132,7 @@ export const board_info: BoardMemberInterface = {
   ],
 }
 
-export const routes = {
+export const routes: RoutesType = {
   about: [
     {
       name: 'Who We Are',
@@ -212,23 +211,29 @@ export const routes = {
       name: 'PBCM Evangelistic Component',
       description:
         'Somewhere people can go to understand what Peninsula BCM is doing outside of Citadel Square.',
-      href: '/reframing/evangelistic-arm',
+      href: '/#',
+      isExternal: false,
     },
     {
       name: 'Family Ministries',
       description:
-        'A re-establishing of family ministries for the local church',
-      href: '/reframing/family-ministries',
+        'Invest in children living on the Eastside by providing opportunities within and beyond the community that will open their minds and hearts to life-altering possibilities',
+      href: '/#',
+      isExternal: false,
     },
     {
       name: 'HELPS Ministry',
-      description: 'A ministry to help those in need',
-      href: 'https://www.helpscharleston.org/',
+      description:
+        "Hope by Equipping through Love, Provision, and Service for our 'Peninsula, Sanders Clyde' community.",
+      href: '/#',
+      isExternal: false,
     },
     {
       name: 'Agape',
-      description: 'A ministry to help those in need',
-      href: 'https://www.agapecharleston.org/',
+      description:
+        'View Agape Ministries of Charleston website for info on Sunday Afternoon Worship Experience',
+      href: 'https://www.agapeministriesofcharleston.org/',
+      isExternal: true,
     },
   ],
   forms: [
@@ -254,9 +259,25 @@ export const routes = {
       href: 'https://pbcm.wufoo.com/forms/z1pkqkei18jvjt8/',
     },
     {
-      name: '',
-      description: '',
-      href: '',
+      name: 'Request Event Information',
+      description:
+        'Request information about upcoming Fundamentals in Biblical Counseling training',
+      href: 'https://forms.gle/HexMYPPkqD2cubFX6',
     },
   ],
+}
+
+type RoutesType = {
+  about: Route[]
+  equipping: Route[]
+  reframing: Route[]
+  forms: Route[]
+}
+
+type Route = {
+  name: string
+  description: string
+  href: string
+  icon?: any
+  isExternal?: boolean
 }

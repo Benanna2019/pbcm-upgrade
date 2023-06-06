@@ -14,6 +14,7 @@ export default function TitusTwo() {
                 <Image
                   className="h-full w-full object-cover"
                   src={WomenGathering}
+                  priority={true}
                   alt="Journey of Hope"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-indigo-200 mix-blend-multiply" />

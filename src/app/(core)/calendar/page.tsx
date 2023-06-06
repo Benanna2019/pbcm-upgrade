@@ -4,7 +4,6 @@ import { getCalendarEvents } from '@/src/models/calendar'
 
 const CalendarRoute = async () => {
   const calendarEvents = await getCalendarEvents()
-  console.log('calendarEvents', calendarEvents)
 
   return (
     <>

@@ -111,11 +111,19 @@ export function Navigation() {
             <NavigationMenuTrigger>PBCM Reframing</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[800px] ">
-                {routes.reframing.map((link) => (
-                  <ListItem key={link.name} title={link.name} href={link.href}>
-                    {link.description}
-                  </ListItem>
-                ))}
+                {routes.reframing.map(
+                  ({ name, href, isExternal, description }) => (
+                    <ListItem
+                      key={name}
+                      title={name}
+                      href={href}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                    >
+                      {description}
+                    </ListItem>
+                  )
+                )}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>

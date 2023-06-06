@@ -30,19 +30,13 @@ export default function FeaturedEvent({ featuredEvent }: any) {
               </div>
             </div>
             <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
-              {featuredEvent[0]?.eventImage ? (
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src={featuredEvent[0]?.eventImage}
-                  alt=""
-                />
-              ) : (
-                <Image
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src={EventPlaceholderImage}
-                  alt=""
-                />
-              )}
+              <Image
+                className="absolute inset-0 h-full w-full object-cover"
+                src={featuredEvent[0]?.eventImage || EventPlaceholderImage}
+                alt={`Event Image for ${featuredEvent[0]?.title}`}
+                loading="lazy"
+                fill={true}
+              />
             </div>
           </main>
         </div>

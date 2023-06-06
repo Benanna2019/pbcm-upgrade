@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { PostType } from '../../../clients/parsers/post'
 import { GhostButton } from '../Button'
+import Image from 'next/image'
 
 interface FeaturedArticle {
   featuredPost: PostType
@@ -17,10 +18,12 @@ export default function FeaturedArticle({ featuredPost }: any) {
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
                 <div className="absolute inset-0">
-                  <img
+                  <Image
                     className="h-full w-full object-cover"
                     src={featuredPost[0].coverImage}
                     alt="People working on laptops"
+                    loading="lazy"
+                    fill={true}
                   />
                   <div className="absolute inset-0 bg-indigo-300 mix-blend-multiply" />
                 </div>
